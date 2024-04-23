@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  height: 10vh;
+}
+
+nav a {
+  margin-left: 1rem;
+  color: #5e5e5e;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  padding: 0.5rem;
+  color: #5e5e5e;
+}
+
+.menu-icon span:hover {
+  border-radius: 9999px;
+  background-color: #e6e3e3;
+  cursor: pointer;
+}
+
+.avatar img {
+  height: 35px;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+
+.avatar img:hover {
+  box-shadow: 0 0 0 1px #fff, 0 0 5px 2px #d2d2d2;
+}
+
+.main-section {
+  height: 74vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.logo {
+  min-height: 92px;
+  object-fit: contain;
+  width: 272px;
+  margin-top: 1rem;
+}
+
+.searchbar {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: 20px;
+  border-radius: 9999px;
+  border: 1px solid rgb(229 231 235);
+  padding: 12px 10px;
+}
+
+.searchbar .search-icon {
+  width: 20px;
+}
+
+.searchbar a img {
+  width: 20px;
+  margin-left: 0.5rem;
+}
+
+.searchbar a img:hover {
+  cursor: pointer;
+}
+
+.search-field {
+  flex: 1;
+  border: none;
+  outline: none;
+}
+
+.searchbar:hover,
+.searchbar:focus-within {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.btn {
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #3c4043;
+  font-size: 14px;
+  margin: 11px 4px;
+  padding: 0 16px;
+  line-height: 27px;
+  height: 36px;
+  text-align: center;
+  cursor: pointer;
+  width: 130px;
+  width: fit-content;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.btn:focus,
+.btn:active {
+  border: 1px solid #0b57d0;
+}
+
+.languages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  margin-top: 1rem;
+  white-space: nowrap;
+}
+
+.languages p {
+  color: #474747;
+}
+
+.languages ul {
+  display: flex;
+}
+
+.languages ul a {
+  margin-left: 0.7rem;
+  color: #1a0dab;
+}
+
+.languages ul a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  display: grid;
+  width: 100%;
+  background-color: rgb(243 244 246);
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(107 114 128);
+  min-height: 16vh;
+}
+
+.top-footer p {
+  padding: 12px 20px;
+  border-bottom: 1px solid #dadce0;
+}
+
+.bottom-footer {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  row-gap: 16px;
+  grid-auto-flow: row dense;
+  padding: 12px 12px;
+}
+
+.bfooter-middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bfooter-middle img {
+  height: 12px;
+  margin-right: 4px;
+}
+
+.bfooter-left {
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.bfooter-right {
+  display: flex;
+  justify-content: center;
+}
+
+.bfooter-left p {
+  margin-left: 20px;
+}
+
+.bfooter-right p {
+  margin-right: 20px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .bottom-footer {
+    font-size: 12px;
+  }
+
+  .bfooter-left p,
+  .bfooter-right p {
+    margin-left: 10px;
+  }
+
+  .languages {
+    padding: 0 10px;
+    font-size: 10px;
+  }
+
+  .btn {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .bfooter-middle {
+    grid-column: span 2 / span 2;
+  }
+
+  .bfooter-left {
+    justify-self: flex-start;
+  }
+
+  .bfooter-right {
+    margin-left: auto;
+  }
+
+  .bottom-footer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .bfooter-middle {
+    grid-column-start: 2;
+    grid-column-end: 2;
+  }
+
+  .bfooter-left {
+    justify-self: flex-start;
+  }
+
+  .bfooter-right {
+    margin-left: auto;
+  }
+
+  .bottom-footer {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: center;
+  }
+
+  .searchbar {
+    width: 60rem;
+  }
+}
